@@ -60,8 +60,6 @@ const App: React.FC = () => {
     } else {
       console.log("too late bud!");
     }
-    console.log(cellInfo);
-    // gameOver()
   };
 
   const handleReset = () => {
@@ -82,7 +80,6 @@ const App: React.FC = () => {
     setWinner("");
     setTurn(1);
     setDisabled(false);
-    // setUpdated(1)
   };
 
   const gameOver = () => {
@@ -133,12 +130,11 @@ const App: React.FC = () => {
               Action
           </Title>
         </TitleWrapper>
-
         <TitleWrapper>
           {winner !== "" ? (
             <SubTitle disabled={disabled}>Player {winner} won!</SubTitle>
           ) : (
-            <SubTitle disabled={disabled}>Turn: {turn}</SubTitle>
+            <SubTitle disabled={false}>Turn: {turn}</SubTitle>
           )}
         </TitleWrapper>
         <TicTacToeContainer>
