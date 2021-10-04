@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Tic Tac Toe
+
+<img src="https://github.com/ferrouslights/tic-tac-toe-ts/raw/master/github/preview.png" width="800" alt="tic tac toe">
+
+This app uses React, Typescript, and Styled components to create a Tic Tac Toe game.
+
+
+## How to Run 👇
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
