@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-<img src="https://github.com/ferrouslights/tic-tac-toe-ts/raw/master/github/preview.png" width="400" alt="tic tac toe">
+<img src="https://github.com/ferrouslights/tic-tac-toe-ts/raw/master/github/preview.png" width="800" alt="tic tac toe">
 
 This app uses React, Typescript, and Styled components to create a Tic Tac Toe game.
 
