@@ -14,21 +14,23 @@ export interface TicTacToeCells {
   player: string;
 }
 
+const blankGrid = [
+  // row 1
+  { id: 1, player: "" },
+  { id: 2, player: "" },
+  { id: 3, player: "" },
+  // row 2
+  { id: 4, player: "" },
+  { id: 5, player: "" },
+  { id: 6, player: "" },
+  // row 3
+  { id: 7, player: "" },
+  { id: 8, player: "" },
+  { id: 9, player: "" },
+]
+
 const App: React.FC = () => {
-  const [cellInfo, setCellInfo] = useState([
-    // row 1
-    { id: 1, player: "" },
-    { id: 2, player: "" },
-    { id: 3, player: "" },
-    // row 2
-    { id: 4, player: "" },
-    { id: 5, player: "" },
-    { id: 6, player: "" },
-    // row 3
-    { id: 7, player: "" },
-    { id: 8, player: "" },
-    { id: 9, player: "" },
-  ] as TicTacToeCells[]);
+  const [cellInfo, setCellInfo] = useState(blankGrid as TicTacToeCells[]);
 
   const [turn, setTurn] = useState(1);
 
@@ -63,20 +65,7 @@ const App: React.FC = () => {
   };
 
   const handleReset = () => {
-    setCellInfo([
-      // row 1
-      { id: 1, player: "" },
-      { id: 2, player: "" },
-      { id: 3, player: "" },
-      // row 2
-      { id: 4, player: "" },
-      { id: 5, player: "" },
-      { id: 6, player: "" },
-      // row 3
-      { id: 7, player: "" },
-      { id: 8, player: "" },
-      { id: 9, player: "" },
-    ]);
+    setCellInfo([...blankGrid]);
     setWinner("");
     setTurn(1);
     setDisabled(false);
