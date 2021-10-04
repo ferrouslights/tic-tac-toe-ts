@@ -45,14 +45,12 @@ const App: React.FC = () => {
 
       //copy correct item
       const item = { ...gameState[index] };
-      console.log(item);
 
       //ternary for who made the move
       turn % 2 === 0 ? (item.player = "2") : (item.player = "1");
 
       //update the temp var
       gameState[index] = item;
-      console.log(gameState);
 
       //set new value
       setCellInfo([...gameState]);
