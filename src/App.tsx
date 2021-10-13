@@ -38,7 +38,7 @@ const App: React.FC = () => {
 
   const [winner, setWinner] = useState("");
 
-  const handleTurn = (id: number) => {
+  const handleTurn = (id: number): void => {
     //generate index
     const index: number = id - 1;
     if (cellInfo[index].player === "") {
@@ -64,7 +64,7 @@ const App: React.FC = () => {
     }
   };
 
-  const handleReset = () => {
+  const handleReset = (): void => {
     setCellInfo([...blankGrid]);
     setWinner("");
     setTurn(1);
@@ -91,7 +91,7 @@ const App: React.FC = () => {
     checkForWin(2, 5, 8);
   };
 
-  const checkForWin = (item1: number, item2: number, item3: number) => {
+  const checkForWin = (item1: number, item2: number, item3: number): void => {
     if (
       cellInfo[item1].player !== "" &&
       cellInfo[item1].player === cellInfo[item2].player &&
@@ -105,7 +105,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     gameOver();
-  }, [cellInfo]);
+  });
 
   return (
     <>
