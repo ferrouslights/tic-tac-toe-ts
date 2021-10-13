@@ -1,7 +1,8 @@
 import React from "react";
 import Cell from "./Cell";
-import { ToeWrapper } from "./TicTacToe.styles";
 import { TicTacToeCells } from "../../App";
+// styles
+import { ToeWrapper } from "./TicTacToe.styles";
 
 interface Props {
     cellInfo: any;

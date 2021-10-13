@@ -14,6 +14,7 @@ export interface TicTacToeCells {
   player: string;
 }
 
+// Resets the grid
 const blankGrid = [
   // row 1
   { id: 1, player: "" },
@@ -29,6 +30,7 @@ const blankGrid = [
   { id: 9, player: "" },
 ]
 
+
 const App: React.FC = () => {
   const [cellInfo, setCellInfo] = useState(blankGrid as TicTacToeCells[]);
 
@@ -38,6 +40,7 @@ const App: React.FC = () => {
 
   const [winner, setWinner] = useState("");
 
+  // handles a turn after an action
   const handleTurn = (id: number): void => {
     //generate index
     const index: number = id - 1;
@@ -64,6 +67,7 @@ const App: React.FC = () => {
     }
   };
 
+  // resets the game
   const handleReset = (): void => {
     setCellInfo([...blankGrid]);
     setWinner("");
@@ -71,6 +75,7 @@ const App: React.FC = () => {
     setDisabled(false);
   };
 
+  // checks the grid for winning combinations
   const gameOver = () => {
     // winning codes
     // 012
@@ -91,6 +96,7 @@ const App: React.FC = () => {
     checkForWin(2, 5, 8);
   };
 
+  // logic for each check
   const checkForWin = (item1: number, item2: number, item3: number): void => {
     if (
       cellInfo[item1].player !== "" &&
@@ -103,6 +109,7 @@ const App: React.FC = () => {
     }
   };
 
+  // runs each rerender to check for a winner
   useEffect(() => {
     gameOver();
   });

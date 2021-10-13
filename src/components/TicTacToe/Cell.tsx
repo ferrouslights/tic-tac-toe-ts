@@ -1,4 +1,5 @@
 import React from "react";
+//styles
 import { CellWrapper, CellIcon } from "./Cell.styles";
 
 interface Props {
